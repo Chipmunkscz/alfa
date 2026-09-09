@@ -26,17 +26,33 @@
         
         img {
             max-width: 100%;
-            max-height: 80vh;
+            max-height: 70vh;
             object-fit: contain;
         }
         
         .button-container {
             display: flex;
+            align-items: center;
+            gap: 15px;
             justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .password-input {
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 2px solid #8B4513;
+            border-radius: 5px;
+            width: 180px;
+        }
+        
+        .password-input:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(139, 69, 19, 0.3);
         }
         
         .enter-button {
-            padding: 15px 40px;
+            padding: 12px 40px;
             font-size: 18px;
             font-weight: bold;
             color: white;
@@ -46,18 +62,29 @@
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
         }
         
-        .enter-button:hover {
+        .enter-button:hover:not(:disabled) {
             background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
             transform: translateY(-2px);
         }
         
-        .enter-button:active {
+        .enter-button:active:not(:disabled) {
             transform: translateY(0);
+        }
+        
+        .enter-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        
+        .error-message {
+            color: red;
+            font-size: 14px;
+            display: none;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -65,8 +92,36 @@
 
     <div class="container">
         <img src="chipmunks titulka.jpg" alt="Hlavní obrázek stránky">
-        <a href="prihaska.html" class="enter-button">VSTOUPIT</a>
+        
+        <div class="button-container">
+            <input type="password" id="passwordInput" class="password-input" placeholder="Zadej heslo...">
+            <button class="enter-button" onclick="checkPassword()">VSTOUPIT</button>
+        </div>
+        <div class="error-message" id="errorMessage">Nesprávné heslo!</div>
     </div>
+
+    <script>
+        const correctPassword = "Veverky26";
+        
+        function checkPassword() {
+            const passwordInput = document.getElementById("passwordInput");
+            const errorMessage = document.getElementById("errorMessage");
+            
+            if (passwordInput.value === correctPassword) {
+                window.location.href = "prihaska.html";
+            } else {
+                errorMessage.style.display = "block";
+                passwordInput.value = "";
+                passwordInput.focus();
+            }
+        }
+        
+        document.getElementById("passwordInput").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                checkPassword();
+            }
+        });
+    </script>
 
 </body>
 </html>
