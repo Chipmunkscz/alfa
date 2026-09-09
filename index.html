@@ -8,23 +8,65 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0; /* Barva pozadí kolem obrázku */
+            background-color: #f0f0f0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            font-family: Arial, sans-serif;
         }
+        
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
         img {
             max-width: 100%;
-            max-height: 100vh;
+            max-height: 80vh;
             object-fit: contain;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .enter-button {
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .enter-button:hover {
+            background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .enter-button:active {
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
 
-    <!-- Místo "muj-obrazek.jpg" napište přesný název vašeho souboru s obrázkem -->
-    <img src="chipmunks titulka.jpg" alt="Hlavní obrázek stránky">
+    <div class="container">
+        <img src="chipmunks titulka.jpg" alt="Hlavní obrázek stránky">
+        <a href="prihaska.html" class="enter-button">VSTOUPIT</a>
+    </div>
 
 </body>
 </html>
