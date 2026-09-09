@@ -189,7 +189,7 @@
     <div class="form-container">
         <h1>Přihláška dítěte</h1>
         
-        <form action="mailto:info@chipmunks.cz?subject=Nová přihláška do kroužku CHIPMUNKS" method="POST" enctype="text/plain">
+        <form action="mailto:info@chipmunks.cz?subject=Nová přihláška do kroužku CHIPMUNKS" method="POST" enctype="text/plain" accept-charset="UTF-8">
             
             <!-- ÚDAJE O DÍTĚTI -->
             <h2 style="color: #8B4513; font-size: 18px; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #8B4513; padding-bottom: 10px;">Údaje o dítěti</h2>
@@ -201,13 +201,13 @@
                 </div>
                 <div class="form-group">
                     <label for="child_surname">Příjmení</label>
-                    <input type="text" id="child_surname" name="Prijmeni">
+                    <input type="text" id="child_surname" name="Příjmení">
                 </div>
             </div>
             
             <div class="form-group">
                 <label for="child_birth">Datum narození</label>
-                <input type="date" id="child_birth" name="Datum narozeni">
+                <input type="date" id="child_birth" name="Datum narození">
             </div>
             
             <!-- ÚDAJE O RODIČÍCH -->
@@ -215,13 +215,13 @@
             
             <div class="form-group">
                 <label for="parent_name">Jméno a příjmení</label>
-                <input type="text" id="parent_name" name="Jmeno rodiče">
+                <input type="text" id="parent_name" name="Jméno rodiče">
             </div>
             
             <div class="form-row">
                 <div class="form-group">
                     <label for="parent_phone">Telefonní číslo</label>
-                    <input type="tel" id="parent_phone" name="Telefonni cislo" placeholder="+420 ...">
+                    <input type="tel" id="parent_phone" name="Telefonní číslo" placeholder="+420 ...">
                 </div>
                 <div class="form-group">
                     <label for="parent_email">Email</label>
@@ -239,12 +239,12 @@
             
             <div class="form-group">
                 <label for="pickup_name">Jméno a příjmení</label>
-                <input type="text" id="pickup_name" name="Osoba k vyzvednuti - jmeno">
+                <input type="text" id="pickup_name" name="Osoba k vyzvednutí - jméno">
             </div>
             
             <div class="form-group">
                 <label for="pickup_phone">Telefonní číslo</label>
-                <input type="tel" id="pickup_phone" name="Osoba k vyzvednuti - telefon">
+                <input type="tel" id="pickup_phone" name="Osoba k vyzvednutí - telefon">
             </div>
             
             <!-- ZDRAVOTNÍ POJIŠŤOVNA -->
@@ -252,13 +252,13 @@
             
             <div class="form-group">
                 <label for="insurance">Zdravotní pojišťovna</label>
-                <input type="text" id="insurance" name="Zdravotni pojistovna">
+                <input type="text" id="insurance" name="Zdravotní pojišťovna">
             </div>
             
             <!-- SPECIÁLNÍ POTŘEBY -->
             <div class="form-group">
                 <label for="allergies">Alergie nebo speciální poznámky</label>
-                <textarea id="allergies" name="Alergie a specilni poznamky" placeholder="Popište případné alergie, zdravotní omezení apod."></textarea>
+                <textarea id="allergies" name="Alergie a speciální poznámky" placeholder="Popište případné alergie, zdravotní omezení apod."></textarea>
             </div>
             
             <!-- TLAČÍTKA -->
