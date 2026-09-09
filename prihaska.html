@@ -50,7 +50,6 @@
         input[type="email"],
         input[type="tel"],
         input[type="date"],
-        input[type="number"],
         select,
         textarea {
             width: 100%;
@@ -66,7 +65,6 @@
         input[type="email"]:focus,
         input[type="tel"]:focus,
         input[type="date"]:focus,
-        input[type="number"]:focus,
         select:focus,
         textarea:focus {
             outline: none;
@@ -76,7 +74,7 @@
         
         textarea {
             resize: vertical;
-            min-height: 100px;
+            min-height: 80px;
         }
         
         .form-row {
@@ -119,6 +117,7 @@
             gap: 10px;
             justify-content: center;
             margin-top: 30px;
+            flex-wrap: wrap;
         }
         
         button {
@@ -134,8 +133,6 @@
         .submit-button {
             background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
             color: white;
-            flex: 1;
-            max-width: 200px;
         }
         
         .submit-button:hover {
@@ -146,12 +143,52 @@
         .reset-button {
             background-color: #ccc;
             color: #333;
-            flex: 1;
-            max-width: 200px;
         }
         
         .reset-button:hover {
             background-color: #bbb;
+        }
+        
+        .secondary-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            border-top: 2px solid #ddd;
+            padding-top: 30px;
+        }
+        
+        .secondary-buttons button {
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 150px;
+        }
+        
+        .gallery-button {
+            background: linear-gradient(135deg, #4169E1 0%, #1E90FF 100%);
+            color: white;
+        }
+        
+        .gallery-button:hover {
+            background: linear-gradient(135deg, #1E90FF 0%, #4169E1 100%);
+            box-shadow: 0 4px 15px rgba(65, 105, 225, 0.3);
+        }
+        
+        .excuse-button {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8787 100%);
+            color: white;
+        }
+        
+        .excuse-button:hover {
+            background: linear-gradient(135deg, #FF8787 0%, #FF6B6B 100%);
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
         }
         
         .back-link {
@@ -168,30 +205,12 @@
         .back-link a:hover {
             text-decoration: underline;
         }
-        
-        .required {
-            color: red;
-        }
-        
-        .info-box {
-            background-color: #fff9e6;
-            border-left: 4px solid #8B4513;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 4px;
-            font-size: 14px;
-            color: #666;
-        }
     </style>
 </head>
 <body>
 
     <div class="form-container">
-        <h1>Přihláška do kroužku CHIPMUNKS</h1>
-        
-        <div class="info-box">
-            <strong>Poznámka:</strong> Všechna pole označená hvězdičkou <span class="required">*</span> jsou povinná.
-        </div>
+        <h1>Přihláška dítěte</h1>
         
         <form action="mailto:info@chipmunks.cz?subject=Nová přihláška do kroužku CHIPMUNKS" method="POST" enctype="text/plain">
             
@@ -200,58 +219,73 @@
             
             <div class="form-row">
                 <div class="form-group">
-                    <label for="child_name">Jméno dítěte <span class="required">*</span></label>
-                    <input type="text" id="child_name" name="Jméno dítěte" required>
+                    <label for="child_name">Jméno dítěte</label>
+                    <input type="text" id="child_name" name="Jméno dítěte">
                 </div>
                 <div class="form-group">
-                    <label for="child_surname">Příjmení <span class="required">*</span></label>
-                    <input type="text" id="child_surname" name="Příjmení" required>
+                    <label for="child_surname">Příjmení</label>
+                    <input type="text" id="child_surname" name="Příjmení">
                 </div>
             </div>
             
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="child_birth">Datum narození <span class="required">*</span></label>
-                    <input type="date" id="child_birth" name="Datum narození" required>
-                </div>
-                <div class="form-group">
-                    <label for="child_age">Věk <span class="required">*</span></label>
-                    <input type="number" id="child_age" name="Věk" min="2" max="6" required>
-                </div>
+            <div class="form-group">
+                <label for="child_birth">Datum narození</label>
+                <input type="date" id="child_birth" name="Datum narození">
             </div>
             
             <!-- ÚDAJE O RODIČÍCH -->
             <h2 style="color: #8B4513; font-size: 18px; margin-top: 25px; margin-bottom: 15px; border-bottom: 2px solid #8B4513; padding-bottom: 10px;">Údaje o rodičích/zákonném zástupci</h2>
             
             <div class="form-group">
-                <label for="parent_name">Jméno a příjmení <span class="required">*</span></label>
-                <input type="text" id="parent_name" name="Jméno rodiče" required>
+                <label for="parent_name">Jméno a příjmení</label>
+                <input type="text" id="parent_name" name="Jméno rodiče">
             </div>
             
             <div class="form-row">
                 <div class="form-group">
-                    <label for="parent_phone">Telefonní číslo <span class="required">*</span></label>
-                    <input type="tel" id="parent_phone" name="Telefonní číslo" placeholder="+420 ..." required>
+                    <label for="parent_phone">Telefonní číslo</label>
+                    <input type="tel" id="parent_phone" name="Telefonní číslo" placeholder="+420 ...">
                 </div>
                 <div class="form-group">
-                    <label for="parent_email">Email <span class="required">*</span></label>
-                    <input type="email" id="parent_email" name="Email" required>
+                    <label for="parent_email">Email</label>
+                    <input type="email" id="parent_email" name="Email">
                 </div>
             </div>
             
             <div class="form-group">
-                <label for="parent_address">Adresa <span class="required">*</span></label>
-                <input type="text" id="parent_address" name="Adresa" placeholder="Ulice, číslo, PSČ, Město" required>
+                <label for="parent_address">Adresa</label>
+                <input type="text" id="parent_address" name="Adresa" placeholder="Ulice, číslo, PSČ, Město">
+            </div>
+            
+            <!-- OSOBA OPRÁVNĚNÁ K VYZVEDNUTÍ -->
+            <h2 style="color: #8B4513; font-size: 18px; margin-top: 25px; margin-bottom: 15px; border-bottom: 2px solid #8B4513; padding-bottom: 10px;">Osoba oprávněná k vyzvednutí dítěte</h2>
+            
+            <div class="form-group">
+                <label for="pickup_name">Jméno a příjmení</label>
+                <input type="text" id="pickup_name" name="Osoba k vyzvednutí - jméno">
+            </div>
+            
+            <div class="form-group">
+                <label for="pickup_phone">Telefonní číslo</label>
+                <input type="tel" id="pickup_phone" name="Osoba k vyzvednutí - telefon">
+            </div>
+            
+            <!-- ZDRAVOTNÍ POJIŠŤOVNA -->
+            <h2 style="color: #8B4513; font-size: 18px; margin-top: 25px; margin-bottom: 15px; border-bottom: 2px solid #8B4513; padding-bottom: 10px;">Zdravotní pojišťovna</h2>
+            
+            <div class="form-group">
+                <label for="insurance">Zdravotní pojišťovna</label>
+                <input type="text" id="insurance" name="Zdravotní pojišťovna">
             </div>
             
             <!-- INFORMACE O KROUŽKU -->
             <h2 style="color: #8B4513; font-size: 18px; margin-top: 25px; margin-bottom: 15px; border-bottom: 2px solid #8B4513; padding-bottom: 10px;">Informace o kroužku</h2>
             
             <div class="form-group">
-                <label for="group">Vybrané skupiny <span class="required">*</span></label>
+                <label for="group">Vybrané skupiny</label>
                 <div class="checkbox-group">
                     <div class="checkbox-item">
-                        <input type="checkbox" id="group1" name="Skupiny" value="Páteční grup (15:00-16:00)">
+                        <input type="checkbox" id="group1" name="Skupiny" value="Páteční grupa (15:00-16:00)">
                         <label for="group1">Páteční grupa (15:00-16:00)</label>
                     </div>
                     <div class="checkbox-item">
@@ -267,31 +301,8 @@
             
             <!-- SPECIÁLNÍ POTŘEBY -->
             <div class="form-group">
-                <label for="allergies">Alergie nebo speciální potřeby</label>
-                <textarea id="allergies" name="Alergie a speciální potřeby" placeholder="Popište případné alergie, zdravotní omezení apod."></textarea>
-            </div>
-            
-            <!-- SOUHLAS -->
-            <h2 style="color: #8B4513; font-size: 18px; margin-top: 25px; margin-bottom: 15px; border-bottom: 2px solid #8B4513; padding-bottom: 10px;">Souhlasy</h2>
-            
-            <div class="form-group">
-                <div class="checkbox-item">
-                    <input type="checkbox" id="consent" name="Souhlas" value="Souhlasím se zpracováním osobních údajů" required>
-                    <label for="consent">Souhlasím se zpracováním osobních údajů <span class="required">*</span></label>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <div class="checkbox-item">
-                    <input type="checkbox" id="photo" name="Fotografie" value="Souhlasím s fotografováním dítěte">
-                    <label for="photo">Souhlasím s fotografováním dítěte na kroužku</label>
-                </div>
-            </div>
-            
-            <!-- POZNÁMKA -->
-            <div class="form-group">
-                <label for="notes">Další poznámky</label>
-                <textarea id="notes" name="Další poznámky" placeholder="Napište jakékoliv další informace, které byste nám rádi sdělili..."></textarea>
+                <label for="allergies">Alergie nebo speciální poznámky</label>
+                <textarea id="allergies" name="Alergie a speciální poznámky" placeholder="Popište případné alergie, zdravotní omezení apod."></textarea>
             </div>
             
             <!-- TLAČÍTKA -->
@@ -301,6 +312,12 @@
             </div>
             
         </form>
+        
+        <!-- SEKUNDÁRNÍ TLAČÍTKA -->
+        <div class="secondary-buttons">
+            <button class="gallery-button" onclick="window.location.href='galerie.html'">Galerie</button>
+            <button class="excuse-button" onclick="window.location.href='omluvenka.html'">Omluvenka</button>
+        </div>
         
         <div class="back-link">
             <a href="index.html">← Zpět na úvodní stránku</a>
