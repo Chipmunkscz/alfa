@@ -89,29 +89,6 @@
             }
         }
         
-        .checkbox-group {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        
-        input[type="checkbox"],
-        input[type="radio"] {
-            margin-right: 8px;
-            cursor: pointer;
-        }
-        
-        .checkbox-item {
-            display: flex;
-            align-items: center;
-        }
-        
-        .checkbox-item label {
-            margin-bottom: 0;
-            font-weight: normal;
-            cursor: pointer;
-        }
-        
         .button-group {
             display: flex;
             gap: 10px;
@@ -224,13 +201,13 @@
                 </div>
                 <div class="form-group">
                     <label for="child_surname">Příjmení</label>
-                    <input type="text" id="child_surname" name="Příjmení">
+                    <input type="text" id="child_surname" name="Prijmeni">
                 </div>
             </div>
             
             <div class="form-group">
                 <label for="child_birth">Datum narození</label>
-                <input type="date" id="child_birth" name="Datum narození">
+                <input type="date" id="child_birth" name="Datum narozeni">
             </div>
             
             <!-- ÚDAJE O RODIČÍCH -->
@@ -238,13 +215,13 @@
             
             <div class="form-group">
                 <label for="parent_name">Jméno a příjmení</label>
-                <input type="text" id="parent_name" name="Jméno rodiče">
+                <input type="text" id="parent_name" name="Jmeno rodiče">
             </div>
             
             <div class="form-row">
                 <div class="form-group">
                     <label for="parent_phone">Telefonní číslo</label>
-                    <input type="tel" id="parent_phone" name="Telefonní číslo" placeholder="+420 ...">
+                    <input type="tel" id="parent_phone" name="Telefonni cislo" placeholder="+420 ...">
                 </div>
                 <div class="form-group">
                     <label for="parent_email">Email</label>
@@ -262,12 +239,12 @@
             
             <div class="form-group">
                 <label for="pickup_name">Jméno a příjmení</label>
-                <input type="text" id="pickup_name" name="Osoba k vyzvednutí - jméno">
+                <input type="text" id="pickup_name" name="Osoba k vyzvednuti - jmeno">
             </div>
             
             <div class="form-group">
                 <label for="pickup_phone">Telefonní číslo</label>
-                <input type="tel" id="pickup_phone" name="Osoba k vyzvednutí - telefon">
+                <input type="tel" id="pickup_phone" name="Osoba k vyzvednuti - telefon">
             </div>
             
             <!-- ZDRAVOTNÍ POJIŠŤOVNA -->
@@ -275,34 +252,13 @@
             
             <div class="form-group">
                 <label for="insurance">Zdravotní pojišťovna</label>
-                <input type="text" id="insurance" name="Zdravotní pojišťovna">
-            </div>
-            
-            <!-- INFORMACE O KROUŽKU -->
-            <h2 style="color: #8B4513; font-size: 18px; margin-top: 25px; margin-bottom: 15px; border-bottom: 2px solid #8B4513; padding-bottom: 10px;">Informace o kroužku</h2>
-            
-            <div class="form-group">
-                <label for="group">Vybrané skupiny</label>
-                <div class="checkbox-group">
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="group1" name="Skupiny" value="Páteční grupa (15:00-16:00)">
-                        <label for="group1">Páteční grupa (15:00-16:00)</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="group2" name="Skupiny" value="Sobotní grupa (09:00-10:00)">
-                        <label for="group2">Sobotní grupa (09:00-10:00)</label>
-                    </div>
-                    <div class="checkbox-item">
-                        <input type="checkbox" id="group3" name="Skupiny" value="Sobotní grupa (10:30-11:30)">
-                        <label for="group3">Sobotní grupa (10:30-11:30)</label>
-                    </div>
-                </div>
+                <input type="text" id="insurance" name="Zdravotni pojistovna">
             </div>
             
             <!-- SPECIÁLNÍ POTŘEBY -->
             <div class="form-group">
                 <label for="allergies">Alergie nebo speciální poznámky</label>
-                <textarea id="allergies" name="Alergie a speciální poznámky" placeholder="Popište případné alergie, zdravotní omezení apod."></textarea>
+                <textarea id="allergies" name="Alergie a specilni poznamky" placeholder="Popište případné alergie, zdravotní omezení apod."></textarea>
             </div>
             
             <!-- TLAČÍTKA -->
