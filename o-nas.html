@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O nás - CHIPMUNKS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #8B4513;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+        
+        .content {
+            line-height: 1.8;
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+        
+        .content p {
+            margin-bottom: 15px;
+        }
+        
+        .content h2 {
+            color: #8B4513;
+            font-size: 22px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #8B4513;
+            padding-bottom: 10px;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-top: 2px solid #ddd;
+            padding-top: 30px;
+            margin-top: 30px;
+        }
+        
+        .nav-button {
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 150px;
+            max-width: 200px;
+        }
+        
+        .registration-button {
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            color: white;
+        }
+        
+        .registration-button:hover {
+            background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
+            box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+        }
+        
+        .gallery-button {
+            background: linear-gradient(135deg, #4169E1 0%, #1E90FF 100%);
+            color: white;
+        }
+        
+        .gallery-button:hover {
+            background: linear-gradient(135deg, #1E90FF 0%, #4169E1 100%);
+            box-shadow: 0 4px 15px rgba(65, 105, 225, 0.3);
+        }
+        
+        .excuse-button {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8787 100%);
+            color: white;
+        }
+        
+        .excuse-button:hover {
+            background: linear-gradient(135deg, #FF8787 0%, #FF6B6B 100%);
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .back-link a {
+            color: #8B4513;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+            }
+            
+            .nav-button {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>O nás</h1>
+        
+        <div class="content">
+            <!-- Zde bude obsah z "o nás.odt" -->
+            <!-- Poznámka: Obsah dokumentu vložte do následující sekce -->
+            <p>Obsah "O nás" bude vložen sem...</p>
+        </div>
+        
+        <!-- NAVIGAČNÍ TLAČÍTKA -->
+        <div class="navigation-buttons">
+            <button class="registration-button" onclick="window.location.href='prihaska.html'">Přihláška</button>
+            <button class="gallery-button" onclick="window.location.href='galerie.html'">Galerie</button>
+            <button class="excuse-button" onclick="window.location.href='omluvenka.html'">Omluvenka</button>
+        </div>
+        
+        <div class="back-link">
+            <a href="index.html">← Zpět na úvodní stránku</a>
+        </div>
+    </div>
+
+</body>
+</html>
