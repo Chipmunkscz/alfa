@@ -1,284 +1,309 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Přihláška - CHIPMUNKS</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            min-height: 100vh;
-        }
-        
-        .form-container {
-            max-width: 600px;
-            margin: 30px auto;
-            background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        h1 {
-            text-align: center;
-            color: #8B4513;
-            margin-bottom: 30px;
-            font-size: 28px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: bold;
-            font-size: 14px;
-        }
-        
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        input[type="date"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            font-size: 14px;
-            font-family: Arial, sans-serif;
-            transition: border-color 0.3s ease;
-        }
-        
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="tel"]:focus,
-        input[type="date"]:focus,
-        select:focus,
-        textarea:focus {
-            outline: none;
-            border-color: #8B4513;
-            box-shadow: 0 0 5px rgba(139, 69, 19, 0.2);
-        }
-        
-        textarea {
-            resize: vertical;
-            min-height: 80px;
-        }
-        
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        
-        @media (max-width: 600px) {
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .button-group {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-        
-        button {
-            padding: 12px 30px;
-            font-size: 16px;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .submit-button {
-            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
-            color: white;
-        }
-        
-        .submit-button:hover {
-            background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .reset-button {
-            background-color: #ccc;
-            color: #333;
-        }
-        
-        .reset-button:hover {
-            background-color: #bbb;
-        }
-        
-        .secondary-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            margin-top: 30px;
-            flex-wrap: wrap;
-            border-top: 2px solid #ddd;
-            padding-top: 30px;
-        }
-        
-        .secondary-buttons button {
-            padding: 12px 30px;
-            font-size: 16px;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            flex: 1;
-            min-width: 150px;
-        }
-        
-        .gallery-button {
-            background: linear-gradient(135deg, #4169E1 0%, #1E90FF 100%);
-            color: white;
-        }
-        
-        .gallery-button:hover {
-            background: linear-gradient(135deg, #1E90FF 0%, #4169E1 100%);
-            box-shadow: 0 4px 15px rgba(65, 105, 225, 0.3);
-        }
-        
-        .excuse-button {
-            background: linear-gradient(135deg, #FF6B6B 0%, #FF8787 100%);
-            color: white;
-        }
-        
-        .excuse-button:hover {
-            background: linear-gradient(135deg, #FF8787 0%, #FF6B6B 100%);
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-        }
-        
-        .back-link {
-            text-align: center;
-            margin-top: 20px;
-        }
-        
-        .back-link a {
-            color: #8B4513;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        
-        .back-link a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Přihláška - CHIPMUNKS</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+background-color: #f0f0f0;
+font-family: Arial, sans-serif;
+padding: 20px;
+min-height: 100vh;
+}
+
+.form-container {
+max-width: 600px;
+margin: 30px auto;
+background-color: white;
+padding: 40px;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+text-align: center;
+color: #8B4513;
+margin-bottom: 30px;
+font-size: 28px;
+}
+
+.form-group { margin-bottom: 20px; }
+
+label {
+display: block;
+margin-bottom: 8px;
+color: #333;
+font-weight: bold;
+font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+width: 100%;
+padding: 12px;
+border: 2px solid #ddd;
+border-radius: 5px;
+font-size: 14px;
+font-family: Arial, sans-serif;
+transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+outline: none;
+border-color: #8B4513;
+box-shadow: 0 0 5px rgba(139, 69, 19, 0.2);
+}
+
+textarea { resize: vertical; min-height: 80px; }
+
+.form-row {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+}
+
+@media (max-width: 600px) {
+.form-row { grid-template-columns: 1fr; }
+}
+
+.button-group {
+display: flex;
+gap: 10px;
+justify-content: center;
+margin-top: 30px;
+flex-wrap: wrap;
+}
+
+button {
+padding: 12px 30px;
+font-size: 16px;
+font-weight: bold;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.submit-button {
+background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+color: white;
+}
+
+.submit-button:hover {
+background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.reset-button { background-color: #ccc; color: #333; }
+.reset-button:hover { background-color: #bbb; }
+
+.secondary-buttons {
+display: flex;
+gap: 15px;
+justify-content: center;
+margin-top: 30px;
+flex-wrap: wrap;
+border-top: 2px solid #ddd;
+padding-top: 30px;
+}
+
+.secondary-buttons button {
+padding: 12px 30px;
+font-size: 16px;
+font-weight: bold;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: all 0.3s ease;
+flex: 1;
+min-width: 150px;
+}
+
+.gallery-button {
+background: linear-gradient(135deg, #4169E1 0%, #1E90FF 100%);
+color: white;
+}
+
+.gallery-button:hover {
+background: linear-gradient(135deg, #1E90FF 0%, #4169E1 100%);
+box-shadow: 0 4px 15px rgba(65, 105, 225, 0.3);
+}
+
+.excuse-button {
+background: linear-gradient(135deg, #FF6B6B 0%, #FF8787 100%);
+color: white;
+}
+
+.excuse-button:hover {
+background: linear-gradient(135deg, #FF8787 0%, #FF6B6B 100%);
+box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.back-link { text-align: center; margin-top: 20px; }
+
+.back-link a {
+color: #8B4513;
+text-decoration: none;
+font-weight: bold;
+}
+
+.back-link a:hover { text-decoration: underline; }
+</style>
 </head>
 <body>
 
-    <div class="form-container">
-        <h1>Přihláška dítěte</h1>
-        
-        <form action="mailto:info@chipmunks.cz?subject=CHIPMUNKS přihláška" method="POST" enctype="text/plain">
-            
-            <!-- ÚDAJE O DÍTĚTI -->
-            <h2 style="color: #8B4513; font-size: 18px; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #8B4513; padding-bottom: 10px;">Údaje o dítěti</h2>
-            
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="child_name">Jméno dítěte</label>
-                    <input type="text" id="child_name" name="Jmeno ditete">
-                </div>
-                <div class="form-group">
-                    <label for="child_surname">Příjmení</label>
-                    <input type="text" id="child_surname" name="Prijmeni">
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label for="child_birth">Datum narození</label>
-                <input type="date" id="child_birth" name="Datum narozeni">
-            </div>
-            
-            <!-- ÚDAJE O RODIČÍCH -->
-            <h2 style="color: #8B4513; font-size: 18px; margin-top: 25px; margin-bottom: 15px; border-bottom: 2px solid #8B4513; padding-bottom: 10px;">Údaje o rodičích/zákonném zástupci</h2>
-            
-            <div class="form-group">
-                <label for="parent_name">Jméno a příjmení</label>
-                <input type="text" id="parent_name" name="Jmeno rodice">
-            </div>
-            
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="parent_phone">Telefonní číslo</label>
-                    <input type="tel" id="parent_phone" name="Telefonni cislo" placeholder="+420 ...">
-                </div>
-                <div class="form-group">
-                    <label for="parent_email">Email</label>
-                    <input type="email" id="parent_email" name="Email">
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label for="parent_address">Adresa</label>
-                <input type="text" id="parent_address" name="Adresa" placeholder="Ulice, číslo, PSČ, Město">
-            </div>
-            
-            <!-- OSOBA OPRÁVNĚNÁ K VYZVEDNUTÍ -->
-            <h2 style="color: #8B4513; font-size: 18px; margin-top: 25px; margin-bottom: 15px; border-bottom: 2px solid #8B4513; padding-bottom: 10px;">Osoba oprávněná k vyzvednutí dítěte</h2>
-            
-            <div class="form-group">
-                <label for="pickup_name">Vyzvedavajici osoba</label>
-                <input type="text" id="pickup_name" name="Vyzvedavajici">
-            </div>
-            
-            <div class="form-group">
-                <label for="pickup_phone">Telefonní číslo</label>
-                <input type="tel" id="pickup_phone" name="Telefonni cislo">
-            </div>
-            
-            <!-- ZDRAVOTNÍ POJIŠŤOVNA -->
-            <h2 style="color: #8B4513; font-size: 18px; margin-top: 25px; margin-bottom: 15px; border-bottom: 2px solid #8B4513; padding-bottom: 10px;">Zdravotní pojišťovna</h2>
-            
-            <div class="form-group">
-                <label for="insurance">Zdravotní pojišťovna</label>
-                <input type="text" id="insurance" name="Zdravotni pojistovna">
-            </div>
-            
-            <!-- SPECIÁLNÍ POTŘEBY -->
-            <div class="form-group">
-                <label for="allergies">Alergie nebo speciální poznámky</label>
-                <textarea id="allergies" name="Alergie a specilni poznamky" placeholder="Popište případné alergie, zdravotní omezení apod."></textarea>
-            </div>
-            
-            <!-- TLAČÍTKA -->
-            <div class="button-group">
-                <button type="reset" class="reset-button">Vymazat</button>
-                <button type="submit" class="submit-button">Odeslat přihlášku</button>
-            </div>
-            
-        </form>
-        
-        <!-- SEKUNDÁRNÍ TLAČÍTKA -->
-        <div class="secondary-buttons">
-            <button class="gallery-button" onclick="window.location.href='galerie.html'">Galerie</button>
-            <button class="excuse-button" onclick="window.location.href='omluvenka.html'">Omluvenka</button>
-        </div>
-        
-        <div class="back-link">
-            <a href="index.html">← Zpět na úvodní stránku</a>
-        </div>
-    </div>
+<div class="form-container">
+<h1>Přihláška dítěte</h1>
+
+<form id="prihlaskaForm">
+
+<!-- ÚDAJE O DÍTĚTI -->
+<h2 style="color: #8B4513; font-size: 18px; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #8B4513; padding-bottom: 10px;">Údaje o dítěti</h2>
+
+<div class="form-row">
+<div class="form-group">
+<label for="child_name">Jméno dítěte</label>
+<input type="text" id="child_name">
+</div>
+<div class="form-group">
+<label for="child_surname">Příjmení</label>
+<input type="text" id="child_surname">
+</div>
+</div>
+
+<div class="form-group">
+<label for="child_birth">Datum narození</label>
+<input type="date" id="child_birth">
+</div>
+
+<!-- ÚDAJE O RODIČÍCH -->
+<h2 style="color: #8B4513; font-size: 18px; margin-top: 25px; margin-bottom: 15px; border-bottom: 2px solid #8B4513; padding-bottom: 10px;">Údaje o rodičích/zákonném zástupci</h2>
+
+<div class="form-group">
+<label for="parent_name">Jméno a příjmení</label>
+<input type="text" id="parent_name">
+</div>
+
+<div class="form-row">
+<div class="form-group">
+<label for="parent_phone">Telefonní číslo</label>
+<input type="tel" id="parent_phone" placeholder="+420 ...">
+</div>
+<div class="form-group">
+<label for="parent_email">Email</label>
+<input type="email" id="parent_email">
+</div>
+</div>
+
+<div class="form-group">
+<label for="parent_address">Adresa</label>
+<input type="text" id="parent_address" placeholder="Ulice, číslo, PSČ, Město">
+</div>
+
+<!-- OSOBA OPRÁVNĚNÁ K VYZVEDNUTÍ -->
+<h2 style="color: #8B4513; font-size: 18px; margin-top: 25px; margin-bottom: 15px; border-bottom: 2px solid #8B4513; padding-bottom: 10px;">Osoba oprávněná k vyzvednutí dítěte</h2>
+
+<div class="form-group">
+<label for="pickup_name">Vyzvedavajici osoba</label>
+<input type="text" id="pickup_name">
+</div>
+
+<div class="form-group">
+<label for="pickup_phone">Telefonní číslo</label>
+<input type="tel" id="pickup_phone">
+</div>
+
+<!-- ZDRAVOTNÍ POJIŠŤOVNA -->
+<h2 style="color: #8B4513; font-size: 18px; margin-top: 25px; margin-bottom: 15px; border-bottom: 2px solid #8B4513; padding-bottom: 10px;">Zdravotní pojišťovna</h2>
+
+<div class="form-group">
+<label for="insurance">Zdravotní pojišťovna</label>
+<input type="text" id="insurance">
+</div>
+
+<!-- SPECIÁLNÍ POTŘEBY -->
+<div class="form-group">
+<label for="allergies">Alergie nebo speciální poznámky</label>
+<textarea id="allergies" placeholder="Popište případné alergie, zdravotní omezení apod."></textarea>
+</div>
+
+<!-- TLAČÍTKA -->
+<div class="button-group">
+<button type="reset" class="reset-button">Vymazat</button>
+<button type="submit" class="submit-button">Odeslat přihlášku</button>
+</div>
+
+</form>
+
+<!-- SEKUNDÁRNÍ TLAČÍTKA -->
+<div class="secondary-buttons">
+<button class="gallery-button" onclick="window.location.href='galerie.html'">Galerie</button>
+<button class="excuse-button" onclick="window.location.href='omluvenka.html'">Omluvenka</button>
+</div>
+
+<div class="back-link">
+<a href="index.html">← Zpět na úvodní stránku</a>
+</div>
+</div>
+
+<script>
+// Oseká diakritiku: "Příliš žluťoučký kůň" -> "Prilis zlutoucky kun"
+function bezDiakritiky(text) {
+return text
+.normalize("NFD")
+.replace(/[\u0300-\u036f]/g, "");
+}
+
+// Seznam políček: [Popisek v e-mailu, id políčka]
+var pole = [
+["Jmeno ditete", "child_name"],
+["Prijmeni", "child_surname"],
+["Datum narozeni", "child_birth"],
+["Jmeno rodice", "parent_name"],
+["Telefonni cislo", "parent_phone"],
+["Email", "parent_email"],
+["Adresa", "parent_address"],
+["Vyzvedavajici osoba", "pickup_name"],
+["Telefon vyzvedavajici", "pickup_phone"],
+["Zdravotni pojistovna","insurance"],
+["Alergie a poznamky", "allergies"]
+];
+
+document.getElementById("prihlaskaForm").addEventListener("submit", function(e) {
+e.preventDefault(); // zruší výchozí odeslání
+
+// Posbírá hodnoty do řádků
+var radky = [];
+for (var i = 0; i < pole.length; i++) {
+var popisek = pole[i][0];
+var hodnota = document.getElementById(pole[i][1]).value;
+radky.push(popisek + ": " + hodnota);
+}
+
+// Oseká diakritiku v těle
+var telo = bezDiakritiky(radky.join("\n"));
+
+// Sestaví mailto odkaz
+var odkaz = "mailto:info@chipmunks.cz"
++ "?subject=" + encodeURIComponent("CHIPMUNKS přihláška")
++ "&body=" + encodeURIComponent(telo);
+
+// Otevře e-mailového klienta
+window.location.href = odkaz;
+});
+</script>
 
 </body>
 </html>
