@@ -3,25 +3,47 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Omluvenka – Čiperkové</title>
+<title>Čiperkové – vstup</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<main class="wrap center-page">
-<div class="card">
-<h1>📋 Omluvenka</h1>
-<p>Prosíme, dejte nám vědět telefonem nebo e-mailem.</p>
-<p>
-<strong>Tel:</strong> <a href="tel:+420777777777">777 777 777</a><br>
-<strong>E-mail:</strong> <a href="mailto:info@chipmunks.cz">info@chipmunks.cz</a>
-</p>
-<div class="back-link">
-<a href="obsah.html">← Zpět na přehled</a>
+<main class="gate">
+<div class="gate-box">
+<img src="chipmunks titulka.jpg" alt="Čiperkové">
+
+<h1>🐿️ Vítejte u Čiperků</h1>
+<p class="lead" style="margin: 0 auto 1rem;">Zadejte prosím přístupový kód.</p>
+
+<form onsubmit="return checkPassword(event)">
+<div class="gate-row">
+<input type="password" id="passwordInput" placeholder="Heslo…" autocomplete="off">
+<button type="submit">Vstoupit</button>
 </div>
+<div class="error-message" id="errorMessage">Nesprávné heslo!</div>
+</form>
 </div>
 </main>
+
+<script>
+const correctPassword = "Veverky26";
+
+function checkPassword(e) {
+e.preventDefault();
+const input = document.getElementById("passwordInput");
+const error = document.getElementById("errorMessage");
+
+if (input.value === correctPassword) {
+window.location.href = "obsah.html";
+} else {
+error.style.display = "block";
+input.value = "";
+input.focus();
+}
+return false;
+}
+</script>
 
 </body>
 </html>
