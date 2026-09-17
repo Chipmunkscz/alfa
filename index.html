@@ -1,127 +1,27 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHIPMUNKS</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            font-family: Arial, sans-serif;
-        }
-        
-        .container {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-        
-        img {
-            max-width: 100%;
-            max-height: 70vh;
-            object-fit: contain;
-        }
-        
-        .button-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .password-input {
-            padding: 12px 15px;
-            font-size: 16px;
-            border: 2px solid #8B4513;
-            border-radius: 5px;
-            width: 180px;
-        }
-        
-        .password-input:focus {
-            outline: none;
-            box-shadow: 0 0 5px rgba(139, 69, 19, 0.3);
-        }
-        
-        .enter-button {
-            padding: 12px 40px;
-            font-size: 18px;
-            font-weight: bold;
-            color: white;
-            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .enter-button:hover:not(:disabled) {
-            background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-            transform: translateY(-2px);
-        }
-        
-        .enter-button:active:not(:disabled) {
-            transform: translateY(0);
-        }
-        
-        .enter-button:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-            box-shadow: none;
-        }
-        
-        .error-message {
-            color: red;
-            font-size: 14px;
-            display: none;
-            margin-top: 10px;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Omluvenka – Čiperkové</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <img src="chipmunks titulka.jpg" alt="Hlavní obrázek stránky">
-        
-        <div class="button-container">
-            <input type="password" id="passwordInput" class="password-input" placeholder="Zadej heslo...">
-            <button class="enter-button" onclick="checkPassword()">VSTOUPIT</button>
-        </div>
-        <div class="error-message" id="errorMessage">Nesprávné heslo!</div>
-    </div>
-
-    <script>
-        const correctPassword = "Veverky26";
-        
-        function checkPassword() {
-            const passwordInput = document.getElementById("passwordInput");
-            const errorMessage = document.getElementById("errorMessage");
-            
-            if (passwordInput.value === correctPassword) {
-                window.location.href = "obsah.html";
-            } else {
-                errorMessage.style.display = "block";
-                passwordInput.value = "";
-                passwordInput.focus();
-            }
-        }
-        
-        document.getElementById("passwordInput").addEventListener("keypress", function(event) {
-            if (event.key === "Enter") {
-                checkPassword();
-            }
-        });
-    </script>
+<main class="wrap center-page">
+<div class="card">
+<h1>📋 Omluvenka</h1>
+<p>Prosíme, dejte nám vědět telefonem nebo e-mailem.</p>
+<p>
+<strong>Tel:</strong> <a href="tel:+420777777777">777 777 777</a><br>
+<strong>E-mail:</strong> <a href="mailto:info@chipmunks.cz">info@chipmunks.cz</a>
+</p>
+<div class="back-link">
+<a href="obsah.html">← Zpět na přehled</a>
+</div>
+</div>
+</main>
 
 </body>
 </html>
