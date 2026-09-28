@@ -27,21 +27,39 @@
 </main>
 
 <script>
-const correctPassword = "Veverky26";
+const passwords = [
+  "Veverky26-01",
+"Veverky26-02",
+"Veverky26-03",
+"Veverky26-04",
+"Veverky26-05",
+"Veverky26-06",
+"Veverky26-07",
+"Veverky26-08",
+"Veverky26-09",
+"Veverky26-10",
+"Veverky26-11",
+"Veverky26-12",
+"Veverky26-13",
+"Veverky26-14",
+"Veverky26-15",
+"Veverky26-16"
+];
 
 function checkPassword(e) {
-e.preventDefault();
-const input = document.getElementById("passwordInput");
-const error = document.getElementById("errorMessage");
+  e.preventDefault();
+  const input = document.getElementById("passwordInput");
+  const error = document.getElementById("errorMessage");
+  const zadane = input.value.trim();
 
-if (input.value === correctPassword) {
-window.location.href = "obsah.html";
-} else {
-error.style.display = "block";
-input.value = "";
-input.focus();
-}
-return false;
+  if (passwords.includes(zadane)) {
+    window.location.href = "obsah.html";
+  } else {
+    error.style.display = "block";
+    input.value = "";
+    input.focus();
+  }
+  return false;
 }
 </script>
 
