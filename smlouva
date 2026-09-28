@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Přihláška a smluvní podmínky účasti dítěte v kroužku</title>
+<style>
+@page { size: A4; margin: 20mm 18mm; }
+* { box-sizing: border-box; }
+body {
+font-family: "Times New Roman", Georgia, serif;
+font-size: 11.5pt;
+line-height: 1.5;
+color: #000;
+max-width: 190mm;
+margin: 0 auto;
+padding: 10mm;
+}
+h1 {
+font-size: 16pt;
+text-align: center;
+margin: 0 0 6mm 0;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+}
+h2 {
+font-size: 12.5pt;
+margin: 6mm 0 2mm 0;
+border-bottom: 1px solid #000;
+padding-bottom: 1mm;
+}
+p { margin: 0 0 2mm 0; }
+ul { margin: 0 0 3mm 0; padding-left: 6mm; }
+li { margin-bottom: 1.5mm; }
+.field {
+display: block;
+margin: 0 0 2mm 0;
+}
+.dots {
+display: inline-block;
+border-bottom: 1px dotted #000;
+min-width: 70mm;
+}
+.short { min-width: 45mm; }
+.signature {
+margin-top: 12mm;
+}
+.signature-line {
+margin-top: 10mm;
+border-top: 1px solid #000;
+width: 70mm;
+padding-top: 1mm;
+font-size: 10pt;
+}
+.checkbox { margin-right: 2mm; }
+.small { font-size: 10pt; color: #333; }
+@media print {
+body { padding: 0; }
+.no-print { display: none; }
+}
+.no-print {
+background: #f0f0f0;
+border: 1px solid #ccc;
+padding: 3mm;
+margin-bottom: 6mm;
+font-family: Arial, sans-serif;
+font-size: 10pt;
+}
+</style>
+</head>
+<body>
+
+<div class="no-print">
+Tip: Pro uložení do PDF stiskni <strong>Ctrl+P</strong> (Cmd+P na Macu) → „Uložit jako PDF“.
+</div>
+
+<h1>Přihláška a smluvní podmínky účasti dítěte v kroužku</h1>
+
+<h2>I. Provozovatel</h2>
+<p><strong>Eliška Skubýová</strong><br>
+Sídlo: Brněnská 2599/22, 695 01 Hodonín<br>
+IČO: 29934451<br>
+Kontakt: <span class="dots"></span></p>
+
+<h2>II. Kroužek</h2>
+<p><strong>Název:</strong> Čiperkové – pohybový kroužek<br>
+<strong>Místo konání:</strong> Mateřská škola, Tychonova 8, Praha 6<br>
+<strong>Termín:</strong> 6. 10. 2026 – 25. 5. 2027<br>
+<strong>Čas:</strong> každé úterý od 15:00 do 15:45</p>
+
+<h2>III. Dítě</h2>
+<p class="field">Jméno a příjmení: <span class="dots"></span></p>
+<p class="field">Datum narození: <span class="dots short"></span></p>
+<p class="field">Zdravotní pojišťovna: <span class="dots short"></span></p>
+
+<h2>IV. Zákonný zástupce</h2>
+<p class="field">Jméno a příjmení: <span class="dots"></span></p>
+<p class="field">Telefon: <span class="dots short"></span></p>
+<p class="field">E-mail: <span class="dots"></span></p>
+
+<h2>V. Osoby oprávněné převzít dítě</h2>
+<p>Jméno, vztah k dítěti, telefon:</p>
+<p>1. <span class="dots"></span></p>
+<p>2. <span class="dots"></span></p>
+<p>Zákonný zástupce se zavazuje oznámit změnu oprávněné osoby nebo způsobu předání bez zbytečného odkladu.</p>
+
+<h2>VI. Předávání dítěte a dohled</h2>
+<ul>
+<li>Zákonný zástupce přihlašuje dítě do uvedeného kroužku a potvrzuje, že se seznámil se zaměřením kroužku, místem a časy konání.</li>
+<li>Provozovatel zajišťuje organizaci kroužku a dohled nad dítětem po dobu od jeho převzetí do jeho předání po skončení lekce.</li>
+<li>Dítě bude převzato lektorem od pověřeného pracovníka Mateřské školy, Tychonova 8, Praha 6, a po skončení kroužku předáno zpět mateřské škole, nebo bude předáváno a přebíráno zákonným zástupcem či výše uvedenou pověřenou osobou.</li>
+<li>Dohled provozovatele nad dítětem začíná jeho převzetím a končí jeho předáním zpět mateřské škole nebo zákonnému zástupci / pověřené osobě, není-li v této přihlášce dohodnuto jinak.</li>
+</ul>
+
+<h2>VII. Zdravotní stav a bezpečnost</h2>
+<ul>
+<li>Zákonný zástupce potvrzuje, že dítě přihlašuje pouze v takovém zdravotním a psychickém stavu, který mu umožňuje bezpečně absolvovat běžnou zábavnou pohybovou aktivitu přiměřenou jeho věku.</li>
+<li>Zákonný zástupce je povinen před zahájením lekce informovat provozovatele o všech zdravotních omezeních, alergiích, úrazech, infekčních onemocněních nebo jiných skutečnostech, které mohou mít význam pro bezpečnost dítěte nebo ostatních účastníků.</li>
+<li>Dítě se nesmí účastnit lekce zejména při horečce, akutním infekčním onemocnění, zvracení, průjmu, výrazné nevolnosti nebo jiném stavu, který může bránit bezpečné účasti.</li>
+<li>Dítě se účastní pohybové aktivity přiměřené jeho věku a schopnostem. Lektor je oprávněn aktivitu upravit, přerušit nebo dítě z účasti dočasně vyřadit, pokud to vyžaduje jeho zdravotní stav nebo bezpečnost.</li>
+<li>Pokud se u dítěte v průběhu lekce objeví zdravotní potíže nebo jeho stav neumožňuje bezpečné pokračování, je provozovatel oprávněn dítě z aktivity vyřadit, zajistit mu přiměřenou pomoc a bez zbytečného odkladu kontaktovat zákonného zástupce. Zákonný zástupce se zavazuje dítě v takovém případě bez zbytečného odkladu převzít, pokud nebude vzhledem k jeho stavu nutné přivolat zdravotnickou záchrannou službu.</li>
+<li>V případě úrazu nebo náhlé zdravotní indispozice provozovatel zajistí podle závažnosti první pomoc, přivolání zdravotnické záchranné služby a informování zákonného zástupce.</li>
+</ul>
+
+<h2>VIII. Odpovědnost</h2>
+<ul>
+<li>Provozovatel odpovídá za bezpečnost dítěte po dobu, kdy je dítě v jeho dohledu, a přijímá přiměřená opatření odpovídající věku dětí, povaze aktivity a podmínkám jejího konání.</li>
+<li>Provozovatel neodpovídá za následky zdravotního stavu dítěte, o kterém nebyl zákonným zástupcem informován, pokud jejich vzniku nemohl při vynaložení přiměřené péče zabránit. Tím není dotčena odpovědnost provozovatele za vlastní porušení právních povinností.</li>
+</ul>
+
+<h2>IX. Zpracování osobních údajů a fotografie</h2>
+<p>Provozovatel zpracovává osobní údaje uvedené v této přihlášce za účelem přihlášení dítěte, organizace kroužku, komunikace se zákonným zástupcem, zajištění bezpečnosti a plnění právních povinností.</p>
+<p>Podrobné informace o zpracování osobních údajů jsou dostupné na <strong>www.chipmunks.cz</strong>.</p>
+<p><strong>Souhlas s fotografiemi:</strong></p>
+<p><span class="checkbox">☐</span> Souhlasím s pořizováním fotografií dítěte za účelem informování o činnosti kroužku. &nbsp;&nbsp; <span class="checkbox">☐</span> Nesouhlasím.</p>
+<p><span class="checkbox">☐</span> Souhlasím se zveřejněním fotografií na uzavřeném okruhu webových stránek www.chipmunks.cz. &nbsp;&nbsp; <span class="checkbox">☐</span> Nesouhlasím.</p>
+
+<h2>X. Prohlášení zákonného zástupce</h2>
+<p>Zákonný zástupce potvrzuje, že:</p>
+<ul>
+<li>uvedené údaje jsou pravdivé,</li>
+<li>seznámil se s podmínkami účasti,</li>
+<li>rozumí způsobu předávání a přebírání dítěte,</li>
+<li>poskytl informace významné pro bezpečnost dítěte,</li>
+<li>zavazuje se oznámit jejich změnu bez zbytečného odkladu.</li>
+</ul>
+
+<h2>XI. Právní ujednání</h2>
+<p>Právní vztah se řídí zejména zákonem č. 89/2012 Sb., občanský zákoník, zejména ustanoveními o smluvních povinnostech, prevenci a náhradě újmy, a dalšími právními předpisy vztahujícími se k provozu činnosti, bezpečnosti a ochraně osobních údajů.</p>
+
+<div class="signature">
+<p>V ................................ dne ................................</p>
+<div class="signature-line">Podpis zákonného zástupce</div>
+</div>
+
+</body>
+</html>
